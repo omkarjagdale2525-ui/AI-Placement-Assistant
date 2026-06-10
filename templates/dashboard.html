@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5 mb-5">
+
+    <h1 class="text-center mb-4">📈 Career Dashboard</h1>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+                <h4>📄 Resumes Created</h4>
+                <h2>{{ stats.resumes_created }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+                <h4>📊 Latest ATS Score</h4>
+                <h2>{{ stats.ats_score }}%</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+                <h4>🎤 Interview Questions</h4>
+                <h2>{{ stats.interview_questions }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+                <h4>🧠 Quizzes Completed</h4>
+                <h2>{{ stats.quizzes_completed }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+                <h4>📝 Cover Letters</h4>
+                <h2>{{ stats.cover_letters }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-4 text-center">
+                <h4>🚀 Placement Readiness</h4>
+                <h2>{{ stats.placement_readiness }}%</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card shadow p-4 mt-4">
+
+        <h3>Overall Placement Readiness</h3>
+
+        <div class="progress mt-3" style="height: 30px;">
+            <div class="progress-bar bg-success" style="width: {{ stats.placement_readiness }}%;">
+                {{ stats.placement_readiness }}%
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-4">
+        <a href="/" class="btn btn-secondary">Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Checker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5 mb-5">
+
+    <h1 class="text-center mb-4">📊 ATS Resume Score Checker</h1>
+
+    <div class="card shadow p-4">
+
+        <form method="POST" action="/ats">
+
+            <label class="form-label">Select Target Role</label>
+            <select name="role" class="form-control mb-3">
+                <option value="software developer">Software Developer</option>
+                <option value="python developer">Python Developer</option>
+                <option value="web developer">Web Developer</option>
+                <option value="data analyst">Data Analyst</option>
+                <option value="it support">IT Support</option>
+            </select>
+
+            <label class="form-label">Paste Resume Text</label>
+            <textarea name="resume_text" class="form-control mb-3" rows="12" placeholder="Paste your resume here..." required></textarea>
+
+            <button type="submit" class="btn btn-primary">Check ATS Score</button>
+            <a href="/" class="btn btn-secondary">Back</a>
+
+        </form>
+
+    </div>
+
+    {% if score is not none %}
+
+    <div class="card shadow p-4 mt-4">
+
+        <h2 class="text-center">ATS Score: {{ score }}/100</h2>
+
+        <p class="text-center text-muted">
+            Resume analyzed for ATS compatibility and role-specific keywords.
+        </p>
+
+        <h4 class="text-center text-{{ score_color }}">{{ level }}</h4>
+
+        <div class="progress mt-3 mb-4" style="height:25px;">
+            <div class="progress-bar bg-{{ score_color }}" style="width: {{ score }}%;">
+                {{ score }}%
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h4 class="text-success">Strengths</h4>
+                <ul>
+                    {% for item in strengths %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="text-danger">Suggestions</h4>
+                <ul>
+                    {% for item in suggestions %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+
+                <a href="/improve_resume" class="btn btn-success">
+    ✨ Improve Resume with AI
+</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

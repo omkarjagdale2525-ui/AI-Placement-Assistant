@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Improver</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5 mb-5">
+
+    <h1 class="text-center mb-4">✨ AI Resume Improver</h1>
+
+    <div class="card shadow p-4">
+
+        <form method="POST" action="/improve_resume">
+
+            <label class="form-label">Paste Your Resume Content</label>
+
+            <textarea
+                name="resume_text"
+                class="form-control mb-3"
+                rows="12"
+                placeholder="Paste your resume content here..."
+                required></textarea>
+
+            <button type="submit" class="btn btn-success">
+                ✨ Improve Resume with AI
+            </button>
+
+            <a href="/" class="btn btn-secondary">
+                Back Home
+            </a>
+
+        </form>
+
+    </div>
+
+    {% if ai_result %}
+
+    <div class="card shadow p-4 mt-4">
+
+        <h3>AI Improved Resume Suggestions</h3>
+
+        <pre style="white-space: pre-wrap; font-family: Arial;">
+{{ ai_result }}
+        </pre>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
