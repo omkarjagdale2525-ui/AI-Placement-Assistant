@@ -1,156 +1,63 @@
 # 🚀 AI Placement Assistant
 
-AI Placement Assistant is a Flask-based web application designed to help students and fresh graduates prepare for placements through AI-powered tools.
+AI-powered Placement Preparation Platform built using Python and Flask.
 
-## 📌 Features
+## Features
 
-### 📄 Resume Generator
+* 📄 Resume Generator
+* 📊 ATS Resume Checker
+* 🎤 Interview Question Generator
+* 📝 Cover Letter Generator
+* 🧠 AI Quiz Generator
+* 📈 Career Dashboard
+* ✨ AI Resume Improver
+* 🔍 Job Match Analyzer
 
-* Generate ATS-friendly resumes
-* Professional formatting
-* PDF download support
-
-### 📊 ATS Resume Checker
-
-* Analyze resume quality
-* ATS score calculation
-* Improvement suggestions
-
-### 📝 Cover Letter Generator
-
-* Generate professional cover letters
-* Company-specific customization
-* PDF export support
-
-### 🎤 Interview Question Generator
-
-* HR Interview Questions
-* Technical Interview Questions
-* Placement preparation support
-
-### 🧠 AI Quiz Generator
-
-* Python MCQs
-* SQL MCQs
-* DBMS MCQs
-* Automatic scoring
-
-### 📈 Career Dashboard
-
-* Placement readiness tracking
-* ATS score visualization
-* Resume and quiz statistics
-
-### ✨ AI Resume Improver
-
-* Resume enhancement suggestions
-* ATS optimization tips
-* Skill and project improvement recommendations
-
-### 🔍 Job Match Analyzer
-
-* Compare resume with job description
-* Match percentage calculation
-* Missing keyword detection
-* Resume optimization suggestions
-
----
-
-## 🛠️ Tech Stack
-
-### Backend
+## Technologies Used
 
 * Python
 * Flask
+* HTML
+* CSS
+* Bootstrap
+* Git
+* GitHub
+* Groq AI
 
-### Frontend
+## Project Modules
 
-* HTML5
-* CSS3
-* Bootstrap 5
+### Resume Generator
 
-### AI Integration
+Generate ATS-friendly resumes with downloadable PDF support.
 
-* Groq API
-* Llama Models
+### ATS Resume Checker
 
-### Database
+Analyze resume quality and provide ATS score with suggestions.
 
-* File-based storage (Current Version)
+### Interview Generator
 
----
+Generate HR and Technical interview questions.
 
-## 📂 Project Structure
+### Cover Letter Generator
 
-```text
-AI-Placement-Assistant
-│
-├── templates/
-├── app.py
-├── requirements.txt
-└── README.md
-```
+Create professional cover letters for job applications.
 
----
+### AI Quiz Generator
 
-## ⚙️ Installation
+Practice technical MCQs and track performance.
 
-### Clone Repository
+### Career Dashboard
 
-```bash
-git clone <repository-url>
-cd AI-Placement-Assistant
-```
+Monitor placement readiness and activity.
 
-### Create Virtual Environment
+### AI Resume Improver
 
-```bash
-python -m venv venv
-```
+Get AI-powered suggestions to enhance resume quality.
 
-### Activate Virtual Environment
+### Job Match Analyzer
 
-```bash
-venv\Scripts\activate
-```
+Compare resume content with job descriptions and identify missing keywords.
 
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run Project
-
-```bash
-python app.py
-```
-
----
-
-## 🌐 Access Application
-
-```text
-http://127.0.0.1:5000
-```
-
----
-
-## 👨‍💻 Developer
+## Author
 
 **Omkar Jagdale**
-
-Computer Engineering Graduate
-
-AI • Python • Flask • SQL • Power BI
-
----
-
-## ⭐ Future Enhancements
-
-* User Authentication
-* Resume Upload (PDF/DOCX)
-* Live Job Recommendations
-* AI Mock Interviews
-* Resume Parsing
-* Cloud Deployment
